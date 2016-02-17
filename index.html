@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.js"></script>
+	<script type="text/javascript" src="angular.js"></script>
+	<meta charset="UTF-8">
+	<title>Angular Lesson 2</title>
+
+	<style type="text/css">
+		.red {
+			color: red;fff
+		}
+
+		.green {
+			color: green;
+		}
+
+		.yellow {
+			color: yellow;
+		}
+
+		.black {
+			color: black;
+		}
+
+		body {
+			vertical-align: center;
+			text-align: center;
+		}ss
+	</style>
+
+</head>
+
+<body ng-app="MyApp">
+	<div ng-controller="MainController as ctrl">
+		
+		<h3>Radio input theme pickers</h3>
+		<input type="checkbox" name="color" ng-model="ctrl.classObject.red">Red
+
+		<input type="checkbox" name="color" ng-model="ctrl.classObject.green">Green
+
+		<input type="checkbox" name="color" ng-model="ctrl.classObject.yellow">Yellow
+
+		<input type="checkbox" name="color" ng-model="ctrl.classObject.black">Black
+
+		<input type="checkbox" name="color" ng-model="ctrl.classObject">None
+		
+		<div ng-class="ctrl.classObject">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni aliquam quae totam reprehenderit tempora similique nostrum, fuga veritatis, commodi animi amet vero aut hic facere ut voluptate distinctio voluptatum, numquam.
+		</div>
+
+		<div ng-class="ctrl.classObject">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni aliquam quae totam reprehenderit tempora similique nostrum, fuga veritatis, commodi animi amet vero aut hic facere ut voluptate distinctio voluptatum, numquam.
+		</div>
+
+		<hr />
+		
+		<div style="dispay: inline;">
+			<div style="float: left; width: 50%;">
+				<input type="checkbox" ng-model="ctrl.shouldshow">Expand
+
+				<h3>Folder 1</h3>
+				<div ng-show="ctrl.shouldshow">
+					<p>	- Item 1.1<br />
+						- Item 1.2</p>
+				</div>
+
+				<h3>Folder 2</h3>
+				<div ng-show="ctrl.shouldshow">
+					<p>	- Item 2.1<br />
+						- Item 2.2</p>
+				</div>
+
+				<h3>Folder 3</h3>
+				<div ng-show="ctrl.shouldshow">
+					<p>	- Item 3.1<br />
+						- Item 3.2</p>
+				</div>
+			</div>
+
+			<div>
+				<h3><input type="text" ng-model="ctrl.shouldshow">Add</h3>
+
+				<input type="radio">Folder 1
+				<br />
+
+				<input type="radio">Folder 2
+				<br />
+
+				<input type="radio">Folder 3
+				<br />
+
+			</div>
+		</div>
+
+
+
+
+		
+
+	</div>
+	
+</body>
+</html>
